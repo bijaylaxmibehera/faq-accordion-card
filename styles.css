@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --text-red: hsl(14, 88%, 65%);
+    --text-dkblue: hsl(238, 29%, 16%);
+    --gradient-violet: hsl(273, 75%, 66%);
+    --gradient-blue: hsl(240, 73%, 65%);
+    --text-very-dkgb: hsl(237, 12%, 33%);
+    --text-dkgb: hsl(240, 6%, 50%);
+    --divider: hsl(240, 5%, 91%);
+}
+
+body {
+    background-image: linear-gradient(var(--gradient-violet), var(--gradient-blue));
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+
+}
+
+.card-container {
+    background-color: #fff;
+    margin: 10rem 0.75rem 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 17px 36px hsl(236, 93%, 58%);
+}
+
+.img-section {
+    width: 100%;
+}
+
+.img-section img#box-img {
+    display: none;
+}
+
+
+.illustration-woman img#mobile-img {
+    margin: -7.5rem auto 0;
+    padding: 0 25px;
+
+}
+
+.bg-pattern img#mobile-bg {
+    width: 90%;
+    padding: 0 16px;
+    transform: translateY(-5.8rem);
+}
+
+.questions-section {
+    padding: 0 20px 20px;
+    margin-top: -4rem;
+}
+
+.text {
+    border-bottom: 2px solid var(--divider);
+}
+
+
+.text.active .answer p {
+    display: block;
+}
+
+.questions-section h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+button {
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+button h2 {
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--text-very-dkgb);
+    text-align: left;
+}
+button h2:hover{
+    color: var(--text-red);
+    cursor: pointer;
+}
+
+.text.active button h2 {
+    font-weight: 700;
+    color: var(--text-dkblue);
+}
+
+.text.active button img {
+    transform: rotate(180deg);
+}
+
+.answer p {
+    font-size: 1em;
+    line-height: 20px;
+    color: var(--text-dkgb);
+    font-weight: 400;
+    display: none;
+}
+
+
+
+/* DESKTOP DESIGN */
+
+@media only screen and (min-width: 900px) {
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card-container {
+        display: flex;
+        width: 80%;
+        height: 60%;
+        margin: 0 0 40px;
+        
+    }
+
+    .img-section {
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-image: url('./images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-position-x: -451px;
+        background-position-y: -237px;
+        background-size: 157%;
+    }
+
+    .img-section img#box-img {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 155px;
+        left: -110px;
+    }
+
+    .bg-pattern img#mobile-bg{
+        display: none;
+    }
+    .illustration-woman{
+        position: absolute;
+        left: -85px;
+        top: 140px;
+        transform: translateX(0%);
+        z-index: 1;
+    }
+
+
+    .questions-section {
+        margin-top: 0;
+        padding: 20px 30px;
+        width: 50%;
+    }
+
+    .questions-section h1 {
+        text-align: left;
+        font-size: 2.56rem;
+    }
+
+    .questions-section h2 {
+        font-size: 1.5em;
+    }
+
+    .answer p {
+        font-size: 1.4em;
+    }
+}
+/* ATTRIBUTION */
+.attribution {
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a {
+    color: #fff;
+}
